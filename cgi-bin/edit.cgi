@@ -13,7 +13,8 @@ if not filename:
     print('Please enter a file name')
     sys.exit()
 
-text = open(join(BASE_DIR, filename)).read()
+with open(join(BASE_DIR, filename), 'r') as input:
+    text = input.read()
 
 print("""
 <html>

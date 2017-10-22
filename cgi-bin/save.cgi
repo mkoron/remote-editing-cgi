@@ -24,8 +24,7 @@ if hashed_password != CHECK_PASS:
     print('Invalid password!')
     sys.exit()
 
-f = open(join(BASE_DIR, filename), 'w')
-f.write(text)
-f.close()
+with open(join(BASE_DIR, filename), 'w') as output:
+    output.write(text)
 
 print("The file has been saved.")
